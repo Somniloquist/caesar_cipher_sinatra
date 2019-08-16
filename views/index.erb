@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>caesar_cipher.rb</title>
+    <style>
+      .shift-value {
+        margin-left: 10px;
+      }
+      .form-fields {
+        border: 1px solid black;
+        padding: 10px;
+      }
+      form > textarea {
+        border: 1px solid #;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class='container'>
+      <h1>Caesar Cipher</h1>
+
+      <form type='post' class='form-fields'>
+        <label for='message'><h5>Your message</h5></label>
+        <textarea name='message' rows='6' cols='30'><%=message%></textarea>
+        <label for='shift_value'><h5>Shift value</h5></label>
+        <input class='shift-value' name='shift_value' type='number' placeholder='0'>
+        <input type='submit' value='Encrypt'>
+      </form>
+
+      <% unless encrypted_message.nil? || encrypted_message.empty? %>
+        <h3>Your encrypted message:</h3>
+        <p><%= encrypted_message %></p>
+      <% end %>
+    </div>
+  </body>
+<html>
